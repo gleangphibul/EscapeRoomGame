@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WallpaperPanellingLight_0: 1950069321676068367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

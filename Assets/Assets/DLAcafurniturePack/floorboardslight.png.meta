@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      floorboardslight_0: -7945578161062892945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

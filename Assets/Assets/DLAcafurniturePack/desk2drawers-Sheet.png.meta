@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desk2drawers-Sheet_0: 7832034540094402131
+      desk2drawers-Sheet_1: 3794263762712078201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

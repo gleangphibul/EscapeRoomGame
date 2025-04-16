@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PurpleSuiteOneSeater_0: 2433926683694602737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      couch3Seater_0: -7702006005494432221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

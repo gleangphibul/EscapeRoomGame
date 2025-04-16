@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WallCrackedBlood_0: 2925004099470278994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

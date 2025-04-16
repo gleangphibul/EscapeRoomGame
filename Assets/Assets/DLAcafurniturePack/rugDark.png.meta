@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rugDark_0: 656795254024465835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

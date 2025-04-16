@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      standinglamp-Sheet_0: -4837627706287798271
+      standinglamp-Sheet_1: 7640662735982774733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

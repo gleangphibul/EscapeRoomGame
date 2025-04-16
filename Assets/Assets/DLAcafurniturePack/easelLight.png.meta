@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      easelLight_0: 5204075236145887779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

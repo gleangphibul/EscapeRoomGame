@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VaseBlue_0: -1386048260347570361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
