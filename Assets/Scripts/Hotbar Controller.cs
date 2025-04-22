@@ -6,16 +6,24 @@ public class HotbarController : MonoBehaviour
 
     public GameObject hotbarPanel;
     public GameObject slotPrefab;
-    public int slotCount = 10; // 1-0 on the keyboard 
+    public int slotCount = 6; // 1-0 on the keyboard 
     private Key[] hotbarKeys;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    private void Awake()
     {
         // Hotbar keys based on slot count
         hotbarKeys = new Key[slotCount];
         for(int i = 0; i < slotCount; i++)
         {
             hotbarKeys[i] = i < 9 ? (Key)((int)Key.Digit1 + i) : Key.Digit0;
+        }
+
+        // Create slots
+        for (int i = 0; i < slotCount; i++)
+        {
+            GameObject slot = Instantiate(slotPrefab, hotbarPanel.transform);
+            slot.name = $"Slot_{i}";
         }
 
     }
