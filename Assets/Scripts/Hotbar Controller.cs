@@ -6,7 +6,7 @@ public class HotbarController : MonoBehaviour
 
     public GameObject hotbarPanel;
     public GameObject slotPrefab;
-    public int slotCount = 6; // 1-0 on the keyboard 
+    public int slotCount = 5; // 1-0 on the keyboard 
     private Key[] hotbarKeys;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
