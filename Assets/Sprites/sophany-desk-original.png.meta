@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sophany-desk-original_0: -8334325277638973841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

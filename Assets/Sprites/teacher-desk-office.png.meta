@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teacher-desk-office_0: -6605336495056527963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

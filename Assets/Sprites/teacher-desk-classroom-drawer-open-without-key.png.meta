@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teacher-desk-classroom-drawer-open-without-key_0: 781804055112866875
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

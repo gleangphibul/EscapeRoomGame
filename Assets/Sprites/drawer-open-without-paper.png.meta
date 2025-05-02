@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      drawer-open-without-paper_0: 1501069331694401624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

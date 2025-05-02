@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teacher-desk-classroom-drawer-open_0: -7098435395467675614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

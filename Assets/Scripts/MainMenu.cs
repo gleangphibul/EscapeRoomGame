@@ -6,7 +6,6 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        // Or alternatively just add code to load the game
     }
 
     public void QuitGame()
