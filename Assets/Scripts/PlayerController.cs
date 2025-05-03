@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         CheckInteraction();
         if (Input.GetKeyDown(KeyCode.Space) && currentInteractable != null) {
             currentInteractable.Interact();
+            Debug.Log("player clicked space");
         }
 
     }

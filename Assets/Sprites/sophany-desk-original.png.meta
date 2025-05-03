@@ -116,10 +116,10 @@ TextureImporter:
       name: sophany-desk-original_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 10
-        width: 84
-        height: 64
+        x: 2
+        y: 15
+        width: 244
+        height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sophany-desk-original_0: -8334325277638973841
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

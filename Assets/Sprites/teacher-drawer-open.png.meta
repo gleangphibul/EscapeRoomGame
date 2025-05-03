@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ba8bb83b19d39584fa7646799972349f
+guid: 719c9992760d39148aa2bb24f47ed455
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3173217705604883729
-    second: sophany-desk-without-apple_0
+      213: 1244295843276023223
+    second: teacher-drawer-open_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sophany-desk-without-apple_0
+      name: teacher-drawer-open_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 244
-        height: 162
+        x: 265
+        y: 387
+        width: 445
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1152f89d0b8890c20800000000000000
-      internalID: 3173217705604883729
+      spriteID: 7b566f51a70a44110800000000000000
+      internalID: 1244295843276023223
       vertices: []
       indices: 
       edges: []

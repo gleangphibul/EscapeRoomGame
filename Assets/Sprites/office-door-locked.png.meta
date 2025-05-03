@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ba8bb83b19d39584fa7646799972349f
+guid: 62a8c892f23fe3d45ba48ec3a287df84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3173217705604883729
-    second: sophany-desk-without-apple_0
+      213: -3437634529852442423
+    second: office-door-locked_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sophany-desk-without-apple_0
+      name: office-door-locked_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 244
-        height: 162
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1152f89d0b8890c20800000000000000
-      internalID: 3173217705604883729
+      spriteID: 9c83784cb911b40d0800000000000000
+      internalID: -3437634529852442423
       vertices: []
       indices: 
       edges: []

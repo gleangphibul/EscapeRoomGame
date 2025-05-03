@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ba8bb83b19d39584fa7646799972349f
+guid: 87df84d84d5d88d4e8913338cb62a343
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3173217705604883729
-    second: sophany-desk-without-apple_0
+      213: -4284940869525841039
+    second: phone-4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sophany-desk-without-apple_0
+      name: phone-4_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 244
-        height: 162
+        x: 160
+        y: 42
+        width: 280
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1152f89d0b8890c20800000000000000
-      internalID: 3173217705604883729
+      spriteID: 17bdb545bf4d884c0800000000000000
+      internalID: -4284940869525841039
       vertices: []
       indices: 
       edges: []
