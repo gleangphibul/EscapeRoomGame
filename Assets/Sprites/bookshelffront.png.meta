@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e826d6c32f1b131469aa31730c967e9d
+guid: bbacc740a5ea84f4b87bc69b7e8e3147
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5095933300938131103
-    second: office-desk-open_0
+      213: 9015849731702939995
+    second: bookshelffront_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: office-desk-open_0
+      name: bookshelffront_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 244
-        height: 218
+        x: 247
+        y: 178
+        width: 461
+        height: 645
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 169bf7689ab9749b0800000000000000
-      internalID: -5095933300938131103
+      spriteID: b51647e109bbe1d70800000000000000
+      internalID: 9015849731702939995
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      office-desk-open_0: -5095933300938131103
+      bookshelffront_0: 9015849731702939995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

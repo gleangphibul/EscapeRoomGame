@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e826d6c32f1b131469aa31730c967e9d
+guid: 2fa59023af00dfc4f812cf906a3fc01d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5095933300938131103
-    second: office-desk-open_0
+      213: -4332461596179574109
+    second: pixels3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: office-desk-open_0
+      name: pixels3_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 244
-        height: 218
+        x: 433
+        y: 182
+        width: 209
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 169bf7689ab9749b0800000000000000
-      internalID: -5095933300938131103
+      spriteID: 3a2d1b4f12100e3c0800000000000000
+      internalID: -4332461596179574109
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      office-desk-open_0: -5095933300938131103
+      pixels3_0: -4332461596179574109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
