@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e826d6c32f1b131469aa31730c967e9d
+guid: 45bd251b81ed94388a4c696eb5e19440
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5095933300938131103
-    second: office-desk-open_0
+      213: 8989667462850282624
+    second: japanese-school_8x8-final.tileset (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 96, y: 200, z: 0, w: 208}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: office-desk-open_0
+      name: japanese-school_8x8-final.tileset (1)_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 243
-        height: 218
+        x: 96
+        y: 200
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 169bf7689ab9749b0800000000000000
-      internalID: -5095933300938131103
+      spriteID: 084041c9de6b1cc70800000000000000
+      internalID: 8989667462850282624
       vertices: []
       indices: 
       edges: []
@@ -138,8 +138,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 90d89df1171294e85bfdddfdec1df497
+    internalID: 633395267
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      office-desk-open_0: -5095933300938131103
+      japanese-school_8x8-final.tileset (1)_0: 8989667462850282624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

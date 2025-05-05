@@ -4,7 +4,8 @@ public class HiddenItem : MonoBehaviour
 {
     public GameObject itemPrefab;      // The UI prefab of the item to add to inventory
     public string associatedPanelName; // The name of the panel this item is associated with
-    private PanelManager panelManager; // Reference to the panel manager
+    [Tooltip("Reference to the specific PanelManager this item is associated with")]
+    public PanelManager targetPanelManager;
     private bool isVisible = false;
     private SpriteRenderer spriteRenderer;
     private Collider2D itemCollider;
@@ -12,7 +13,18 @@ public class HiddenItem : MonoBehaviour
     void Start()
     {
         // Get references
-        panelManager = FindObjectOfType<PanelManager>();
+        if (targetPanelManager == null)
+        {
+            // Try to find panel manager in parent objects if not directly assigned
+            targetPanelManager = GetComponentInParent<PanelManager>();
+            
+            // If still not found, use any panel manager in the scene as fallback
+            if (targetPanelManager == null)
+            {
+                targetPanelManager = FindObjectOfType<PanelManager>();
+                Debug.LogWarning("HiddenItem on " + gameObject.name + " found a PanelManager, but it's recommended to assign it directly in the inspector.");
+            }
+        }
         spriteRenderer = GetComponent<SpriteRenderer>();
         itemCollider = GetComponent<Collider2D>();
         
@@ -29,20 +41,22 @@ public class HiddenItem : MonoBehaviour
     // Check if this item should be visible based on panel state
     private void CheckVisibility()
     {
-        if (panelManager != null)
+        if (targetPanelManager != null)
         {
             // Check if we're at the final panel
-            bool isFinalPanel = panelManager.currentPanelIndex == panelManager.openedPanels.Count - 1;
+            bool isFinalPanel = targetPanelManager.currentPanelIndex == targetPanelManager.openedPanels.Count - 1;
             
             // If we're at the final panel but item is not yet visible, show it
             if (isFinalPanel && !isVisible)
             {
                 ShowItem();
+                Debug.Log("at least its final");
             }
             // If we're not at final panel but item is visible, hide it
             else if (!isFinalPanel && isVisible)
             {
                 HideItem();
+
             }
         }
     }

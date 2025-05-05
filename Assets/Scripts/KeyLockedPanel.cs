@@ -3,91 +3,110 @@ using TMPro;
 
 public class KeyLockedPanel : Interactable
 {
-    [Header("Item Requirements")]
-    public string requiredItemId;
-    public bool consumeItemOnUse = false;
+    [Header("Key Settings")]
+    public int requiredKeyID; // The ID of the key item needed to unlock this panel
+    public string keyName; // Optional: The name of the key for debugging or UI display
 
-    [Header("Panel Settings")]
+    [Header("UI Elements")]
+    public GameObject lockedPanel;
+
+    [Header("Panel Manager")]
     public PanelManager panelManager;
-    public TMP_Text feedbackText;
+    public int requiredItemPanelIndex = 1;
 
-    private InventoryController playerInventory;
+    private bool isUnlocked = false;
+    private InventoryController inventoryController;
 
-    private void Start()
+    void Start()
     {
-        if (panelManager == null)
-        {
-            panelManager = GetComponent<PanelManager>();
-            if (panelManager == null)
-            {
-                panelManager = FindObjectOfType<PanelManager>();
-            }
-        }
-
-        playerInventory = FindObjectOfType<InventoryController>();
-
-        // Hide feedback text if available
-        if (feedbackText != null)
-        {
-            feedbackText.gameObject.SetActive(false);
-        }
+        inventoryController = FindObjectOfType<InventoryController>();
     }
 
     public override void Interact()
     {
-        TryUnlock();
+        if (isUnlocked)
+        {
+            Debug.Log("Panel already unlocked. Showing final panel.");
+            panelManager.ShowFinalPanelOnly();
+        }
+        else
+        {
+            OpenLockedPanel();
+            TryUnlockWithKey();
+        }
     }
 
-    private void TryUnlock()
+    private void OpenLockedPanel()
     {
-        if (playerInventory == null)
+        lockedPanel.SetActive(!lockedPanel.activeSelf);
+        
+    }
+
+    private void TryUnlockWithKey()
+    {
+        Debug.Log("Checking for key with ID: " + requiredKeyID);
+        
+        // Find the key in inventory
+        GameObject keyItem = FindKeyInInventory();
+        
+        if (keyItem != null)
         {
-            Debug.LogError("Player inventory not found!");
-            return;
+            Debug.Log("Found key: " + keyName);
+            
+            // Unlock panel
+            isUnlocked = true;
+            // Remove key from inventory
+            RemoveKeyFromInventory(keyItem);
+            // Move to next panel
+            panelManager.MoveToNextPanel();
         }
+        else
+        {
+            Debug.Log("Key not found in inventory");
+        }
+    }
 
-        // // Check if player has the required item
-        // if (playerInventory.HasKeyForObject(requiredItemId))
-        // {
-        //     Debug.Log("Unlocked with item: " + requiredItemId);
+    private GameObject FindKeyInInventory()
+    {
+        // Check all slots in the inventory panel
+        foreach (Transform slotTransform in inventoryController.inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem != null)
+            {
+                Item item = slot.currentItem.GetComponent<Item>();
+                if (item != null && item.ID == requiredKeyID)
+                {
+                    return slot.currentItem;
+                }
+            }
+        }
+        
+        return null;
+    }
 
-        //     // Remove the item if needed
-        //     if (consumeItemOnUse)
-        //     {
-        //         // Find the item that unlocks this object
-        //         foreach (Item item in playerInventory.inventoryItems)
-        //         {
-        //             if (item.isKey && item.unlocksObjectId == requiredItemId)
-        //             {
-        //                 playerInventory.RemoveItem(item.itemName);
-        //                 break;
-        //             }
-        //         }
-        //     }
+    private void RemoveKeyFromInventory(GameObject keyItem)
+    {
+        // Find the slot containing the key
+        Slot keySlot = keyItem.GetComponentInParent<Slot>();
+        
+        if (keySlot != null)
+        {
+            // Remove the reference to the key item
+            keySlot.currentItem = null;
+            
+            // Destroy the key game object
+            Destroy(keyItem);
+            
+            Debug.Log("Key removed from inventory");
+        }
+    }
 
-        //     // Show the panel
-        //     if (panelManager != null)
-        //     {
-        //         panelManager.MoveToNextPanel();
-        //     }
-
-        //     // Hide feedback text
-        //     if (feedbackText != null)
-        //     {
-        //         feedbackText.gameObject.SetActive(false);
-        //     }
-        // }
-        // else
-        // {
-        //     // Player doesn't have the required item
-        //     Debug.Log("Missing required item: " + requiredItemId);
-
-        //     // Show feedback text if available
-        //     if (feedbackText != null)
-        //     {
-        //         feedbackText.gameObject.SetActive(true);
-        //         feedbackText.text = "You need a key to unlock this.";
-        //     }
-        // }
+    private void ShowFeedback(bool show)
+    {
+        if (lockedPanel != null)
+        {
+            lockedPanel.SetActive(show);
+        }
     }
 }

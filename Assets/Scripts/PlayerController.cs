@@ -10,12 +10,26 @@ public class PlayerController : MonoBehaviour
     private Vector2 boxSize = new Vector2(1.2f, 1.2f); // interaction area size
     public LayerMask interactableLayer;
     private Interactable currentInteractable = null;
+    [Header("Animation")]
+    public Sprite spriteUp;
+    public Sprite spriteDown;
+    public Sprite spriteRight;
+    public SpriteRenderer _playerSpriteRenderer;
+    public Sprite[] spriteUpFrames;
+    public Sprite[] spriteDownFrames;
+    public Sprite[] spriteRightFrames;
+    int currentFrameIndex = 0;
+    float frameTimer;
+    private float framesPerSecond = 6;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         interactIcon.SetActive(false);
+        _playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        frameTimer = 1f / framesPerSecond;
+        currentFrameIndex = 0;
     }
 
     // Update is called once per frame
@@ -48,6 +62,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("player clicked space");
         }
 
+        // Animation
+        AnimateSprite();
+
     }
 
     public void CheckInteraction() {
@@ -70,6 +87,39 @@ public class PlayerController : MonoBehaviour
                 currentInteractable = interact;
                 break;
             }
+        }
+    }
+
+    private void AnimateSprite() {
+        frameTimer -= Time.deltaTime;
+        if (frameTimer <= 0) {
+            currentFrameIndex++;
+            if (currentFrameIndex >= spriteRightFrames.Length) {
+                currentFrameIndex = 0;
+            }
+            frameTimer = 1f / framesPerSecond;
+            if (Input.GetKey(KeyCode.UpArrow)) {
+                _playerSpriteRenderer.sprite = spriteUpFrames[currentFrameIndex];
+            } else if (Input.GetKey(KeyCode.DownArrow)) {
+            _playerSpriteRenderer.sprite = spriteDownFrames[currentFrameIndex];
+            } else if (Input.GetKey(KeyCode.LeftArrow)) {
+                _playerSpriteRenderer.sprite = spriteRightFrames[currentFrameIndex];
+                _playerSpriteRenderer.flipX = true;
+            } else if (Input.GetKey(KeyCode.RightArrow)) {
+                _playerSpriteRenderer.sprite = spriteRightFrames[currentFrameIndex];
+                _playerSpriteRenderer.flipX = false;
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.UpArrow)) {
+            _playerSpriteRenderer.sprite = spriteUp;
+        } else if (Input.GetKeyUp(KeyCode.DownArrow)) {
+            _playerSpriteRenderer.sprite = spriteDown;
+        } else if (Input.GetKeyUp(KeyCode.LeftArrow)) {
+            _playerSpriteRenderer.sprite = spriteRight;
+            _playerSpriteRenderer.flipX = true;
+        } else if (Input.GetKeyUp(KeyCode.RightArrow)) {
+            _playerSpriteRenderer.sprite = spriteRight;
+            _playerSpriteRenderer.flipX = false;
         }
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e826d6c32f1b131469aa31730c967e9d
+guid: 220b594d7feb44c32ba6f305735aa78a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5095933300938131103
-    second: office-desk-open_0
+      213: 7011216920528730642
+    second: doorUNopened 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: office-desk-open_0
+      name: doorUNopened 1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 243
-        height: 218
+        x: 0
+        y: 3
+        width: 32
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 169bf7689ab9749b0800000000000000
-      internalID: -5095933300938131103
+      spriteID: 21ab25764a8dc4160800000000000000
+      internalID: 7011216920528730642
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      office-desk-open_0: -5095933300938131103
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
