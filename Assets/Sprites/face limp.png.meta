@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 60e11e2d4ea44d349a439924e5921913
+guid: 29c8aeb46f630bd438ef48a5ec24b9ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8334325277638973841
-    second: sophany-desk-original_0
+      213: 931785984664816134
+    second: face limp_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sophany-desk-original_0
+      name: face limp_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 244
-        height: 184
+        x: 0
+        y: 143
+        width: 145
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6625cf2157865c80800000000000000
-      internalID: -8334325277638973841
+      spriteID: 60a42ae8a6e5eec00800000000000000
+      internalID: 931785984664816134
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      face limp_0: 931785984664816134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

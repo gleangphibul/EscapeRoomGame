@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 52bddde68c0790d41b796cdd8a46e317
+guid: 64f0b07190368804081ad7ef3ee79b4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 881867626312897507
-    second: teacher-desk-without-pencil_0
+      213: -9000454020426094509
+    second: guard-close-up_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: teacher-desk-without-pencil_0
+      name: guard-close-up_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 15
-        width: 244
-        height: 189
+        x: 85
+        y: 21
+        width: 140
+        height: 271
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e31c4d0fe50d3c00800000000000000
-      internalID: 881867626312897507
+      spriteID: 358244f31c6f71380800000000000000
+      internalID: -9000454020426094509
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      guard-close-up_0: -9000454020426094509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
