@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sophany-desk-without-apple_0: 3173217705604883729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

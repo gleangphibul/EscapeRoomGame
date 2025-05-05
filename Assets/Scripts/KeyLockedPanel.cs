@@ -46,48 +46,48 @@ public class KeyLockedPanel : Interactable
             return;
         }
 
-        // Check if player has the required item
-        if (playerInventory.HasKeyForObject(requiredItemId))
-        {
-            Debug.Log("Unlocked with item: " + requiredItemId);
+        // // Check if player has the required item
+        // if (playerInventory.HasKeyForObject(requiredItemId))
+        // {
+        //     Debug.Log("Unlocked with item: " + requiredItemId);
 
-            // Remove the item if needed
-            if (consumeItemOnUse)
-            {
-                // Find the item that unlocks this object
-                foreach (Item item in playerInventory.inventoryItems)
-                {
-                    if (item.isKey && item.unlocksObjectId == requiredItemId)
-                    {
-                        playerInventory.RemoveItem(item.itemName);
-                        break;
-                    }
-                }
-            }
+        //     // Remove the item if needed
+        //     if (consumeItemOnUse)
+        //     {
+        //         // Find the item that unlocks this object
+        //         foreach (Item item in playerInventory.inventoryItems)
+        //         {
+        //             if (item.isKey && item.unlocksObjectId == requiredItemId)
+        //             {
+        //                 playerInventory.RemoveItem(item.itemName);
+        //                 break;
+        //             }
+        //         }
+        //     }
 
-            // Show the panel
-            if (panelManager != null)
-            {
-                panelManager.MoveToNextPanel();
-            }
+        //     // Show the panel
+        //     if (panelManager != null)
+        //     {
+        //         panelManager.MoveToNextPanel();
+        //     }
 
-            // Hide feedback text
-            if (feedbackText != null)
-            {
-                feedbackText.gameObject.SetActive(false);
-            }
-        }
-        else
-        {
-            // Player doesn't have the required item
-            Debug.Log("Missing required item: " + requiredItemId);
+        //     // Hide feedback text
+        //     if (feedbackText != null)
+        //     {
+        //         feedbackText.gameObject.SetActive(false);
+        //     }
+        // }
+        // else
+        // {
+        //     // Player doesn't have the required item
+        //     Debug.Log("Missing required item: " + requiredItemId);
 
-            // Show feedback text if available
-            if (feedbackText != null)
-            {
-                feedbackText.gameObject.SetActive(true);
-                feedbackText.text = "You need a key to unlock this.";
-            }
-        }
+        //     // Show feedback text if available
+        //     if (feedbackText != null)
+        //     {
+        //         feedbackText.gameObject.SetActive(true);
+        //         feedbackText.text = "You need a key to unlock this.";
+        //     }
+        // }
     }
 }

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teacher-desk-without-pencil_0: 881867626312897507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
