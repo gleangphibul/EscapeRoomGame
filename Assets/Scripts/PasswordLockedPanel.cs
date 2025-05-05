@@ -17,7 +17,6 @@ public class PasswordLockedPanel : Interactable
     public PanelManager panelManager;
 
     private bool isUnlocked = false;
-    private bool panelActive = false;
 
     void Update()
     {
@@ -49,7 +48,6 @@ public class PasswordLockedPanel : Interactable
     private void OpenLockedPanel()
     {
         lockedPanel.SetActive(!lockedPanel.activeSelf);
-        panelActive = true;
         inputField.text = "";
         feedbackText.text = "";
         feedbackText.gameObject.SetActive(false);

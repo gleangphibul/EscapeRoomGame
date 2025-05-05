@@ -4,20 +4,18 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     public int ID; 
-    public string Name;
+    public string itemName;
+    public string unlocksObjectId; // The ID of the object this item can unlock
+    public bool isKey = true;      // Since all items are keys
 
     public virtual void UseItem()
     {
-        Debug.Log("Using item" + Name);
+        Debug.Log("Using item: " + itemName);
     }
+
     public virtual void PickUp()
     {
         Sprite itemIcon = GetComponent<Image>().sprite;
-        if(ItemPickUpUIController.Instance != null)
-        {
-            ItemPickUpUIController.Instance.ShowItemPickup(Name, itemIcon);
-        }
+        // You can extend this to display the icon in UI
     }
-
-
 }

@@ -6,12 +6,12 @@ public class KeyLockedPanel : Interactable
     [Header("Item Requirements")]
     public string requiredItemId;
     public bool consumeItemOnUse = false;
-    
+
     [Header("Panel Settings")]
     public PanelManager panelManager;
     public TMP_Text feedbackText;
 
-    private InventorySystem playerInventory;
+    private InventoryController playerInventory;
 
     private void Start()
     {
@@ -24,9 +24,8 @@ public class KeyLockedPanel : Interactable
             }
         }
 
+        playerInventory = FindObjectOfType<InventoryController>();
 
-        playerInventory = FindObjectOfType<InventorySystem>();
-        
         // Hide feedback text if available
         if (feedbackText != null)
         {
@@ -51,12 +50,12 @@ public class KeyLockedPanel : Interactable
         if (playerInventory.HasKeyForObject(requiredItemId))
         {
             Debug.Log("Unlocked with item: " + requiredItemId);
-            
+
             // Remove the item if needed
             if (consumeItemOnUse)
             {
                 // Find the item that unlocks this object
-                foreach (InventorySystem.InventoryItem item in playerInventory.inventoryItems)
+                foreach (Item item in playerInventory.inventoryItems)
                 {
                     if (item.isKey && item.unlocksObjectId == requiredItemId)
                     {
@@ -65,13 +64,13 @@ public class KeyLockedPanel : Interactable
                     }
                 }
             }
-            
+
             // Show the panel
             if (panelManager != null)
             {
                 panelManager.MoveToNextPanel();
             }
-            
+
             // Hide feedback text
             if (feedbackText != null)
             {
@@ -82,7 +81,7 @@ public class KeyLockedPanel : Interactable
         {
             // Player doesn't have the required item
             Debug.Log("Missing required item: " + requiredItemId);
-            
+
             // Show feedback text if available
             if (feedbackText != null)
             {
