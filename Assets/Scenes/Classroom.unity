@@ -5677,7 +5677,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.690155, y: 0, z: 603.6549, w: 0}
+  m_margin: {x: 86.690155, y: 0, z: 420.17212, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10224,7 +10224,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.690155, y: 0, z: 603.6549, w: 0}
+  m_margin: {x: -38.6221, y: 0, z: 603.6549, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13033,7 +13033,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2935703304287340142, guid: ac2de93afd83e8e4893cd7d85f1a29bb, type: 3}
       propertyPath: m_Name
-      value: Book Shelf
+      value: Bookshelf
       objectReference: {fileID: 0}
     - target: {fileID: 2935703304287340142, guid: ac2de93afd83e8e4893cd7d85f1a29bb, type: 3}
       propertyPath: m_Layer
@@ -13088,7 +13088,10 @@ PrefabInstance:
       addedObject: {fileID: 944364871}
     - targetCorrespondingSourceObject: {fileID: 2935703304287340142, guid: ac2de93afd83e8e4893cd7d85f1a29bb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 944364870}
+      addedObject: {fileID: 944364874}
+    - targetCorrespondingSourceObject: {fileID: 2935703304287340142, guid: ac2de93afd83e8e4893cd7d85f1a29bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 944364873}
   m_SourcePrefab: {fileID: 100100000, guid: ac2de93afd83e8e4893cd7d85f1a29bb, type: 3}
 --- !u!4 &944364868 stripped
 Transform:
@@ -13100,18 +13103,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2935703304287340142, guid: ac2de93afd83e8e4893cd7d85f1a29bb, type: 3}
   m_PrefabInstance: {fileID: 944364867}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &944364870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944364869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae457e573f514411a1dc670feed8cfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &944364871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13158,6 +13149,40 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.85, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &944364873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944364869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4692516d5ec16f42bd398dfa9185b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctCode: 
+  passwordLengthLimit: 7
+  lockedPanel: {fileID: 1620297490}
+  inputField: {fileID: 313873647}
+  feedbackText: {fileID: 1074788052}
+  panelManager: {fileID: 944364874}
+--- !u!114 &944364874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944364869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ae20eca3c6133448fce3cab5ff8a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openedPanels:
+  - {fileID: 1620297490}
+  - {fileID: 961830672}
+  currentPanelIndex: 0
 --- !u!1001 &944647553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16240,7 +16265,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.690155, y: 0, z: 603.6549, w: 0}
+  m_margin: {x: -35.56595, y: 0, z: 603.6549, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -16427,14 +16452,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"good job! see how my favorite word is WORD itself? haha!"
+  m_text: '"good job! see how my favorite word is WORD itself? haha!
+
+    alright
+    you can take the key but DO NOT tell anyone about this"
 
 
-    door
-    key acquired.
-
-
-    press ESC or ENTER to return to the game'
+    press ESC or ENTER
+    to return to the game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 121273861ba7f400480cefe552e87556, type: 2}
   m_sharedMaterial: {fileID: -8359430909403090515, guid: 121273861ba7f400480cefe552e87556, type: 2}
@@ -16499,7 +16524,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -114.48013, y: 0, z: 603.6549, w: 0}
+  m_margin: {x: -114.48013, y: 0, z: 515.7886, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17706,7 +17731,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.690155, y: 0, z: 406.92163, w: 0}
+  m_margin: {x: 86.690155, y: 0, z: 352.6516, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -19696,7 +19721,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.690155, y: 0, z: 603.6549, w: 0}
+  m_margin: {x: -38.62259, y: 0, z: 603.6549, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -20131,7 +20156,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.690155, y: 0, z: 603.6549, w: 0}
+  m_margin: {x: -37.026398, y: 0, z: 603.6549, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -20157,6 +20182,7 @@ GameObject:
   - component: {fileID: 1476871314}
   - component: {fileID: 1476871313}
   - component: {fileID: 1476871312}
+  - component: {fileID: 1476871315}
   m_Layer: 6
   m_Name: Office Desk
   m_TagString: Untagged
@@ -20292,6 +20318,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1476871315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476871310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ae20eca3c6133448fce3cab5ff8a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openedPanels:
+  - {fileID: 8064470}
+  - {fileID: 1038387469}
+  - {fileID: 2020003416}
+  currentPanelIndex: 0
 --- !u!1 &1488578001
 GameObject:
   m_ObjectHideFlags: 0
@@ -20302,7 +20345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488578002}
   m_Layer: 5
-  m_Name: Book Shelf Panels
+  m_Name: Bookshelf Panels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20664,10 +20707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'paper acquired
-
-
-    press ENTER to view the paper'
+  m_text: press ENTER to view the paper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 121273861ba7f400480cefe552e87556, type: 2}
   m_sharedMaterial: {fileID: -8359430909403090515, guid: 121273861ba7f400480cefe552e87556, type: 2}
@@ -20732,7 +20772,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 86.690155, y: 0, z: 603.6549, w: 0}
+  m_margin: {x: -35.56595, y: 0, z: 603.6549, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -24149,10 +24189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'test paper acquired
-
-
-    press ESC or ENTER to return to the game'
+  m_text: press ESC or ENTER to return to the game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 121273861ba7f400480cefe552e87556, type: 2}
   m_sharedMaterial: {fileID: -8359430909403090515, guid: 121273861ba7f400480cefe552e87556, type: 2}
