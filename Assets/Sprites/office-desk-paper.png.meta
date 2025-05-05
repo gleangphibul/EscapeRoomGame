@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b65fa48ca47a8e4c8be6779251b57fa
+guid: 95bfdf4a53401fe41a3d9b5189c1170f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 667944262417106944
-    second: teacher-drawer-without-key_0
+      213: -2810768290336022437
+    second: office-desk-paper_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: teacher-drawer-without-key_0
+      name: office-desk-paper_0
       rect:
         serializedVersion: 2
-        x: 265
-        y: 387
-        width: 445
-        height: 194
+        x: 2
+        y: 15
+        width: 243
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 008c12b84c3054900800000000000000
-      internalID: 667944262417106944
+      spriteID: b50e69cc1252ef8d0800000000000000
+      internalID: -2810768290336022437
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      teacher-drawer-without-key_0: 667944262417106944
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

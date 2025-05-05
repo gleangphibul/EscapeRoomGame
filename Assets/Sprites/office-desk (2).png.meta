@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: af8dec40c4026794895f0fee7465b08d
+guid: bf9a79a886920f04eb06c54671094cdc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7690166280180567844
-    second: office-desk-with-paper_0
+      213: -1425308276487503820
+    second: office-desk (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: office-desk-with-paper_0
+      name: office-desk (2)_0
       rect:
         serializedVersion: 2
         x: 2
         y: 15
-        width: 244
+        width: 243
         height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd0762e238a074590800000000000000
-      internalID: -7690166280180567844
+      spriteID: 430c9849ca9483ce0800000000000000
+      internalID: -1425308276487503820
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      office-desk-with-paper_0: -7690166280180567844
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
