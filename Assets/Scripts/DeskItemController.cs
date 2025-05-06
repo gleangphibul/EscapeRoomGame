@@ -28,7 +28,6 @@ public class DeskItemController : Interactable
 
         if (isUnlocked)
         {
-            Debug.Log("Panel already unlocked. Showing final panel.");
             panelManager.ShowFinalPanelOnly();
         }
         else {
@@ -36,13 +35,11 @@ public class DeskItemController : Interactable
             GameObject requiredItem = FindRequiredItemInInventory();
             if (requiredItem != null) {
                 // Player has the item, proceed to next panel
-                Debug.Log("Found required item, moving to next panel");
                 panelManager.MoveToNextPanel();
                 RemoveItemFromInventory(requiredItem);
                 isUnlocked = true;
             } else {
                 // Player doesn't have the required item
-                Debug.Log("Required item not found in inventory");
             }
         }
     }
@@ -83,8 +80,6 @@ public class DeskItemController : Interactable
             
             // Destroy the item game object
             Destroy(itemObject);
-            
-            Debug.Log("Item removed from inventory");
         }
     }
 }

@@ -4,43 +4,39 @@ using TMPro;
 public class Door : Interactable
 {
     [Header("Key Settings")]
-    public int requiredKeyID; // The ID of the key item needed to unlock this door
-    public string keyName; // Optional: The name of the key for debugging
+    public int requiredKeyID;
+    public string keyName;
     
     [Header("Door Visuals")]
-    public SpriteRenderer doorRenderer; // The sprite renderer of the door
-    public Sprite lockedSprite; // Sprite when door is locked
-    public Sprite unlockedSprite; // Sprite when door is unlocked
+    public SpriteRenderer doorRenderer; 
+    public Sprite lockedSprite; 
+    public Sprite unlockedSprite; 
     
     [Header("Collider")]
-    public Collider2D doorCollider; // Collider that blocks the player from passing
+    public Collider2D doorCollider; 
     
     [Header("Feedback")]
-    public GameObject feedbackTextObject; // Optional: Text object to show messages
-    public TMP_Text feedbackText; // Optional: Text component for feedback
-    public float feedbackDuration = 2f; // How long to show feedback messages
+    public GameObject feedbackTextObject; 
+    public TMP_Text feedbackText; 
+    public float feedbackDuration = 2f; 
     
     private bool isUnlocked = false;
     private InventoryController inventoryController;
     
     void Start()
     {
-        // Get reference to inventory controller
         inventoryController = FindObjectOfType<InventoryController>();
         
-        // Set initial door state
         if (doorRenderer != null)
         {
             doorRenderer.sprite = lockedSprite;
         }
         
-        // Make sure collider is active
         if (doorCollider != null)
         {
             doorCollider.enabled = true;
         }
         
-        // Hide feedback text initially
         if (feedbackTextObject != null)
         {
             feedbackTextObject.SetActive(false);
@@ -51,7 +47,6 @@ public class Door : Interactable
     {
         if (isUnlocked)
         {
-            Debug.Log("Door is already unlocked.");
             return;
         }
         
@@ -60,22 +55,14 @@ public class Door : Interactable
     
     private void TryUnlockDoor()
     {
-        Debug.Log("Checking for key with ID: " + requiredKeyID);
         
-        // Find the key in inventory
         GameObject keyItem = FindKeyInInventory();
         
         if (keyItem != null)
         {
-            Debug.Log("Found key: " + keyName + ". Unlocking door.");
-            
-            // Unlock door
             UnlockDoor();
-            
-            // Remove key from inventory
             RemoveKeyFromInventory(keyItem);
             
-            // Show success message if feedback exists
             if (feedbackText != null)
             {
                 ShowFeedback("Door unlocked!");
@@ -83,9 +70,7 @@ public class Door : Interactable
         }
         else
         {
-            Debug.Log("Key not found in inventory");
-            
-            // Show error message if feedback exists
+           
             if (feedbackText != null)
             {
                 ShowFeedback("You need a key to unlock this door.");
@@ -97,13 +82,11 @@ public class Door : Interactable
     {
         isUnlocked = true;
         
-        // Change door sprite to unlocked version
         if (doorRenderer != null && unlockedSprite != null)
         {
             doorRenderer.sprite = unlockedSprite;
         }
         
-        // Disable the collider so player can pass through
         if (doorCollider != null)
         {
             doorCollider.enabled = false;

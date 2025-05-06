@@ -16,8 +16,8 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        originalParent = transform.parent; //Save OG parent
-        transform.SetParent(transform.root); //Above other canvas'
+        originalParent = transform.parent; 
+        transform.SetParent(transform.root);
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f; //Semi-transparent during drag
     }
@@ -30,7 +30,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true; //Enables raycasts
-        canvasGroup.alpha = 1f; //No longer transparent
+        canvasGroup.alpha = 1f; 
 
         Slot dropSlot = eventData.pointerEnter?.GetComponent<Slot>(); //Slot where item dropped
         if(dropSlot == null)

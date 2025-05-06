@@ -1,48 +1,36 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float remainingTime = 900;
+    [SerializeField] float remainingTime = 20;
+   
+    private bool timeIsUp = false;
 
-    public AudioSource soundTimesUp; 
 
-    void Start() 
-    {
-        soundTimesUp = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
         }
-        else if (remainingTime < 0)
+        else if (!timeIsUp)
         {
             remainingTime = 0;
-            PlaySound();
-            // GameOver(); or call some other function
+            timeIsUp = true;
             timerText.color = Color.red;
+            Invoke("LoadGameOverScene", 1f);
         }
 
-        
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    public void PlaySound()
+    void LoadGameOverScene()
     {
-        soundTimesUp.Play();
-    }
-
-    public void DeductTime30Seconds()
-    {
-        remainingTime -= 30;
+        SceneManager.LoadScene("Game Over");
     }
 }

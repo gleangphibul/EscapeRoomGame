@@ -26,11 +26,6 @@ public class PasswordLockedPanel : Interactable
             SubmitCode();
         }
 
-        // if (Input.GetKeyDown(KeyCode.Escape))
-        // {
-        //     Debug.Log("Resetting panel index.");
-        //     ResetPanelIndex();
-        // }
     }
 
     public override void Interact()
@@ -60,6 +55,7 @@ public class PasswordLockedPanel : Interactable
     public void SubmitCode()
     {
         string input = inputField.text.Trim();
+        input = input.ToUpper();
         Debug.Log("User submitted: " + input);
 
         if (input.Length > passwordLengthLimit)
@@ -73,7 +69,7 @@ public class PasswordLockedPanel : Interactable
         {
             Debug.Log("Correct code entered. Unlocking panel.");
             isUnlocked = true;
-            panelManager.MoveToNextPanel(); // or ShowFinalPanelOnly() if it's the last step
+            panelManager.MoveToNextPanel();
         }
         else
         {
